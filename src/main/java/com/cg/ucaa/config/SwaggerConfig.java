@@ -1,3 +1,4 @@
+/**
 package com.cg.ucaa.config;
 
 import org.springframework.context.annotation.Bean;
@@ -41,4 +42,4 @@ public class SwaggerConfig implements WebMvcConfigurer {
 		return new ApiInfoBuilder().title("Swagger API Doc").description("More description about the API")
 				.version("1.0.0").build();
 	}
-}
+}**/

@@ -21,6 +21,8 @@ import com.cg.ucaa.models.AdmissionModel;
 import com.cg.ucaa.service.IAdmissionCommiteeMemberService;
 import com.cg.ucaa.service.IAdmissionService;
 
+
+
 @RestController
 @RequestMapping(path = "/admissioncommiteemember")
 public class AdmissionCommiteeMemberRestController {
@@ -47,7 +49,7 @@ public class AdmissionCommiteeMemberRestController {
 	 * Fetching all committee members
 	 * @return
 	 */
-	@GetMapping
+	@GetMapping("/viewallcommiteemembers")
 	public ResponseEntity<List<AdmissionCommiteeMemberModel>> viewAllAdmissionCommiteeMember()
 			throws AdmissionCommiteeMemberNotFoundException {
 		return new ResponseEntity<>(admissionCommiteeMemberService.viewAllCommiteeMembers(), HttpStatus.OK);
@@ -87,7 +89,7 @@ public class AdmissionCommiteeMemberRestController {
 	 * Updating staff details of University
 	 * @return
 	 */
-	@PutMapping
+	@PutMapping("/updatemember")
 	public ResponseEntity<AdmissionCommiteeMemberModel> updateCommiteeMember(@RequestBody AdmissionCommiteeMemberModel commiteeMember)
 			throws AdmissionCommiteeMemberNotFoundException {
 		ResponseEntity<AdmissionCommiteeMemberModel> response = new ResponseEntity<AdmissionCommiteeMemberModel>(admissionCommiteeMemberService.updateCommiteeMember(commiteeMember),

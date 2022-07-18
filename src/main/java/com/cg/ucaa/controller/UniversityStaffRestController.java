@@ -40,7 +40,7 @@ public class UniversityStaffRestController {
 	 * Fetching all staff members
 	 * @return
 	 */
-	@GetMapping
+	@GetMapping("/viewallstaff")
 	public ResponseEntity<List<UniversityStaffMemberModel>> viewAllStaffs() {
 		return new ResponseEntity<>(staffService.viewAllStaffs(), HttpStatus.OK);
 

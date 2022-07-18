@@ -45,7 +45,7 @@ public class CourseRestController {
 	 * @return
 	 */
 
-	@GetMapping
+	@GetMapping("/viewallcourse")
 	public ResponseEntity<List<CourseModel>> viewAllCourse() throws CourseNotFoundException {
 		return new ResponseEntity<>(courseService.viewAllCourses(), HttpStatus.OK);
 
@@ -82,7 +82,7 @@ public class CourseRestController {
 	 * 
 	 * @return
 	 */
-	@PutMapping
+	@PutMapping("/updatecourse")
 	public ResponseEntity<CourseModel> updateCourse(@RequestBody CourseModel course) throws CourseNotFoundException {
 		ResponseEntity<CourseModel> response = new ResponseEntity<CourseModel>(courseService.updateCourse(course),
 				HttpStatus.OK);

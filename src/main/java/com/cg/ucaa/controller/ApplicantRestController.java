@@ -40,7 +40,7 @@ public class ApplicantRestController {
 	 * Fetching all applicants
 	 * @return
 	 */	
-	@GetMapping
+	@GetMapping("/viewallapplicants")
 	public ResponseEntity<List<ApplicantModel>> viewAllApplicants()
 			throws ApplicantNotFoundException {
 		return new ResponseEntity<>(applicantService.viewAllApplicants(), HttpStatus.OK);

@@ -70,7 +70,7 @@ public class AdmissionRestController {
 	 * return type: AdmissionModel
 	 * param: AdmissionModel
 	 * */
-	@PutMapping
+	@PutMapping("/updateadmission")
 	public ResponseEntity<AdmissionModel> updateAdmission(@RequestBody AdmissionModel admission) throws AdmissionNotGrantedException{
 		admission = admissionService.updateAdmission(admission);
 		return new ResponseEntity<>(admission,HttpStatus.OK);
